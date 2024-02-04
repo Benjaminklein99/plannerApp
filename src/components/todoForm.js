@@ -7,9 +7,8 @@ const TodoForm = ({todos, setTodos}) => {
     <form className="todoForm" onSubmit={
       (e) => {
         e.preventDefault();
-        const newTodos = [input, ...todos]
-        setTodos(newTodos)
-        console.log(newTodos)
+        const newTodos = [{id: Math.floor(Math.random() * 10000), text: input}, ...todos];
+        setTodos(newTodos);
         setInput('');
       }
     }>

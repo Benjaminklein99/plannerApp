@@ -1,9 +1,12 @@
+import Button from '@mui/material/Button';
+
 
 const Todo = ({todo}) => {
   return (
     <div className="todo">
-      <p>{todo}</p>
+      <p>{todo.text}</p>
     </div>
+
   )
 }
 
