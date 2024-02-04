@@ -19,3 +19,13 @@ body {
   background-color: #e3e8ea;
 }
 
+.todo {
+  color: white;
+  background-color: #6fcb9f;
+  width: 50%;
+  transform: translate(50%);
+  height: 50px;
+  border: 1px solid #bbdecd;
+  border-radius: 5px;
+  margin-top: 5px;
+}

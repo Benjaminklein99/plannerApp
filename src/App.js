@@ -6,19 +6,18 @@ import React, { useState } from 'react';
 
 function App() {
 
-  // const [isOpen, close] = useState(true);
+  const [isOpen, close] = useState(true);
   const [todos, setTodos] = useState([]);
-  
+
   return (
     <div className="App">
-      {/* {
+      {
         isOpen && <Welcome close={close}/>
       }
       {
         !isOpen && <TodoForm setTodos={setTodos} todos={todos} />
-      } */}
-      <TodoForm setTodos={setTodos} todos={todos} />
-      {/* <TodoList todos={todos}/> */}
+      }
+      <TodoList todos={todos}/>
     </div>
   );
 }
