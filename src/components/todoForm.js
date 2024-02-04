@@ -1,10 +1,18 @@
 import {useState} from 'react';
 
-const TodoForm = ({setTodo, todos}) => {
-  const [input, setInput] = useState('')
+const TodoForm = ({todos, setTodos}) => {
+  const [input, setInput] = useState('');
 
   return (
-    <form className="todoForm">
+    <form className="todoForm" onSubmit={
+      (e) => {
+        e.preventDefault();
+        const newTodos = [input, ...todos]
+        setTodos(newTodos)
+        console.log(newTodos)
+        setInput('');
+      }
+    }>
       <input
         type="text"
         placeholder="Add your todo"
@@ -12,7 +20,7 @@ const TodoForm = ({setTodo, todos}) => {
         name="text"
         className="todoInput"
         onChange={(e) => { setInput(e.target.value)}}
-      /><button onClick={() => { setTodo([input, ...todos])}}>Add todo</button>
+      /><button>Add todo</button>
     </form>
   );
 }

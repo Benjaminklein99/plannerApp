@@ -4,8 +4,8 @@ const TodoList = ({todos}) => {
   return (
     <div className="todoList">
       {
-        todos.map((todo) => {
-          return <Todo todo={todo} />
+        todos.map((todo, i) => {
+          return <Todo todo={todo} key={i}/>
         })
       }
     </div>
